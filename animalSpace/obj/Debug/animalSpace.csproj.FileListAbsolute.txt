@@ -1,0 +1,13 @@
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.csproj.AssemblyReference.cache
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.csproj.SuggestedBindingRedirects.cache
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.Forms.FormCreatures.resources
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.Forms.FormDiet.resources
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.Forms.FormKingdom.resources
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.Properties.Resources.resources
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.csproj.GenerateResource.cache
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.csproj.CoreCompileInputs.cache
+E:\repos\animalSpace\animalSpace\bin\Debug\animalSpace.exe.config
+E:\repos\animalSpace\animalSpace\bin\Debug\animalSpace.exe
+E:\repos\animalSpace\animalSpace\bin\Debug\animalSpace.pdb
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.exe
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.pdb
