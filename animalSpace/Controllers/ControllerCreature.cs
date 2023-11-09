@@ -23,7 +23,7 @@ namespace animalSpace.Controllers
             return Instance;
         }
 
-        public void createCreature(string Name, IDiet Diet, IKingdom Kingdom, string Environment)
+        public void createCreature(string Name, IDiet Diet, IKingdom Kingdom, List<IEnvironment> Environment)
         {
             listCreatures.Add(new Creature(Name, Diet, Kingdom, Environment));
         }

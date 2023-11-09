@@ -22,11 +22,11 @@ namespace animalSpace.Model
         protected int AttackRange { get; set; }
         protected IKingdom Kingdom;
         protected IDiet Diet;
-        protected string Environment;
+        protected List<IEnvironment> Environment;
 
         protected bool Alive = true;
 
-        public Creature(string creatureName, IDiet diet, IKingdom kingdom, string environment)
+        public Creature(string creatureName, IDiet diet, IKingdom kingdom, List<IEnvironment> environment)
         {
             counterID++;
             ID = counterID;
@@ -48,7 +48,7 @@ namespace animalSpace.Model
             return CreatureName;
         }
 
-        public string getCreatureEnvironment()
+        public List<IEnvironment> getCreatureEnvironment()
         {
             return Environment;
         }

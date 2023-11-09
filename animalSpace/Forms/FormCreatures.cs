@@ -1,5 +1,9 @@
 ﻿using animalSpace.Controllers;
+using animalSpace.Interfaces;
 using animalSpace.Model;
+using animalSpace.Model.Diets;
+using animalSpace.Model.Environments;
+using animalSpace.Model.Kingdoms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Environment = animalSpace.Model.Environment;
 
 namespace animalSpace.Forms
 {
@@ -22,33 +25,57 @@ namespace animalSpace.Forms
             addItemsToCbCreatureDiet();
             addItemsToCbCreatureEnvironment();
             addItemsToCbCreatureKingdom();
+
         }
 
         public void addItemsToCbCreatureDiet()
         {
+            cbCreatureDiet.Items.Add(new CarnivorousDiet());
+            cbCreatureDiet.Items.Add(new HerviborousDiet());
+            cbCreatureDiet.Items.Add(new OmnivorousDiet());
+            cbCreatureDiet.SelectedIndex = 0;
+            cbCreatureDiet.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         public void addItemsToCbCreatureEnvironment()
         {
-            Environment terrestrial = new Environment("terrestrial");
+            /*Environment terrestrial = new Environment("Terrestrial");
             Environment Aero = new Environment("Aero");
-            Environment Acuatic = new Environment("Acuatic");
-            cbCreatureEnvironment.Items.Add(terrestrial.getEnvironmentName());
-            cbCreatureEnvironment.Items.Add(Aero.getEnvironmentName());
-            cbCreatureEnvironment.Items.Add(Acuatic.getEnvironmentName());
-            cbCreatureEnvironment.SelectedIndex = 0;
+            Environment Acuatic = new Environment("Acuatic");*/
+            listBoxEnvironments.Items.Add(new Terrestrial());
+            listBoxEnvironments.Items.Add(new Aerial());
+            listBoxEnvironments.Items.Add(new Aquatic());
+            listBoxEnvironments.SelectedIndex = 0;
+            listBoxEnvironments.SelectionMode = SelectionMode.MultiSimple;
         }
 
         public void addItemsToCbCreatureKingdom()
         {
-            //cbCreatureKingdom.SelectedIndex = 0;
+            cbCreatureKingdom.Items.Add(new AnimalKingdom());
+            cbCreatureKingdom.Items.Add(new MytholigicKingdom());
+            cbCreatureKingdom.Items.Add(new MachineKingdom());
+            cbCreatureKingdom.SelectedIndex = 0;
+            cbCreatureKingdom.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnCreateCreature_Click(object sender, EventArgs e)
         {
-            /*ctrCreature.createCreature(tbCreatureName.Text,
-                cbCreatureEnvironment.SelectedItem.ToString());*/
+            List<IEnvironment> selectedEnvironments = selectedEnvironmentsInListbox();
+            ctrCreature.createCreature(tbCreatureName.Text,
+                (IDiet)cbCreatureDiet.SelectedItem, 
+                (IKingdom)cbCreatureKingdom.SelectedItem,
+                selectedEnvironments);
             loadDgvCreatures();
+        }
+
+        private List<IEnvironment> selectedEnvironmentsInListbox() 
+        {
+            List<IEnvironment> itemsInListbox = new List<IEnvironment>();
+            foreach (IEnvironment environment in listBoxEnvironments.SelectedItems) 
+            {
+                itemsInListbox.Add(environment);
+            }
+            return itemsInListbox;
         }
 
         public void loadDgvCreatures()

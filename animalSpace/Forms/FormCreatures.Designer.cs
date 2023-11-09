@@ -32,7 +32,6 @@
             this.lbKingdom = new System.Windows.Forms.Label();
             this.cbCreatureKingdom = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbCreatureEnvironment = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbCreatureDiet = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnDeleteCreature = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
+            this.listBoxEnvironments = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,24 +78,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 103);
+            this.label1.Location = new System.Drawing.Point(12, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Select the creature\'s environment";
             // 
-            // cbCreatureEnvironment
-            // 
-            this.cbCreatureEnvironment.FormattingEnabled = true;
-            this.cbCreatureEnvironment.Location = new System.Drawing.Point(184, 103);
-            this.cbCreatureEnvironment.Name = "cbCreatureEnvironment";
-            this.cbCreatureEnvironment.Size = new System.Drawing.Size(121, 21);
-            this.cbCreatureEnvironment.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 135);
+            this.label2.Location = new System.Drawing.Point(12, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 13);
             this.label2.TabIndex = 5;
@@ -104,7 +96,7 @@
             // cbCreatureDiet
             // 
             this.cbCreatureDiet.FormattingEnabled = true;
-            this.cbCreatureDiet.Location = new System.Drawing.Point(165, 135);
+            this.cbCreatureDiet.Location = new System.Drawing.Point(172, 169);
             this.cbCreatureDiet.Name = "cbCreatureDiet";
             this.cbCreatureDiet.Size = new System.Drawing.Size(121, 21);
             this.cbCreatureDiet.TabIndex = 6;
@@ -127,7 +119,7 @@
             // 
             // btnCreateCreature
             // 
-            this.btnCreateCreature.Location = new System.Drawing.Point(16, 170);
+            this.btnCreateCreature.Location = new System.Drawing.Point(15, 201);
             this.btnCreateCreature.Name = "btnCreateCreature";
             this.btnCreateCreature.Size = new System.Drawing.Size(128, 23);
             this.btnCreateCreature.TabIndex = 9;
@@ -199,11 +191,20 @@
             this.btnModify.Text = "Modify creature";
             this.btnModify.UseVisualStyleBackColor = true;
             // 
+            // listBoxEnvironments
+            // 
+            this.listBoxEnvironments.FormattingEnabled = true;
+            this.listBoxEnvironments.Location = new System.Drawing.Point(173, 103);
+            this.listBoxEnvironments.Name = "listBoxEnvironments";
+            this.listBoxEnvironments.Size = new System.Drawing.Size(120, 43);
+            this.listBoxEnvironments.TabIndex = 14;
+            // 
             // FormCreatures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 212);
+            this.ClientSize = new System.Drawing.Size(924, 244);
+            this.Controls.Add(this.listBoxEnvironments);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnDeleteCreature);
             this.Controls.Add(this.label4);
@@ -213,7 +214,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbCreatureDiet);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbCreatureEnvironment);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbCreatureKingdom);
             this.Controls.Add(this.lbKingdom);
@@ -232,7 +232,6 @@
         private System.Windows.Forms.Label lbKingdom;
         private System.Windows.Forms.ComboBox cbCreatureKingdom;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbCreatureEnvironment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbCreatureDiet;
         private System.Windows.Forms.Label label3;
@@ -246,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kingdom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Environment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
+        private System.Windows.Forms.ListBox listBoxEnvironments;
     }
 }

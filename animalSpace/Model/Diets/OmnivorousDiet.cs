@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace animalSpace.Model.Diets
 {
-    internal class OmnivorousDietIDiet : IDiet
+    internal class OmnivorousDiet : IDiet
     {
         public bool CanEat(Food food)
         {
