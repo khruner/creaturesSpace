@@ -91,6 +91,9 @@
     <Compile Include="Model\Environments\Terrestrial.cs" />
     <Compile Include="Model\InteractablesAndItems\Food.cs" />
     <Compile Include="Model\InteractablesAndItems\Item.cs" />
+    <Compile Include="Model\InteractablesAndItems\ItemStrategies\ReduceDefense.cs" />
+    <Compile Include="Model\InteractablesAndItems\ItemStrategies\ReduceAttack.cs" />
+    <Compile Include="Model\InteractablesAndItems\ItemStrategies\IncreaseDefense.cs" />
     <Compile Include="Model\InteractablesAndItems\ItemStrategies\IncreaseAttack.cs" />
     <Compile Include="Model\Kingdoms\AnimalKingdom.cs" />
     <Compile Include="Model\Kingdoms\MachineKingdom.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace animalSpace.Model.Environments
 {
-    internal class Aquatic
+    internal class Aquatic : IEnvironment
     {
         public override string ToString()
         {
