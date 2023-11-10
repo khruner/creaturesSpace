@@ -85,7 +85,7 @@ namespace animalSpace.Forms
             foreach (var creature in listCreatures)
             {
                 DataGridViewRow row = new DataGridViewRow();
-                row.CreateCells(dgvCreatures, creature.getCreatureName(), creature.getCreatureKingdom(), creature.getCreatureEnvironment(), creature.getCreatureDiet());
+                row.CreateCells(dgvCreatures, creature.getCreatureName(), creature.getCreatureKingdom(), creature.CompatibleEnvironments(), creature.getCreatureDiet());
                 dgvCreatures.Rows.Add(row);
             }
         }

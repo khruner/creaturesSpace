@@ -11,9 +11,25 @@ namespace animalSpace.Model.InteractablesAndItems
     {
         protected static int id_counter = 0;
         protected int Id;
-        protected int Calories;
-        protected List<IDiet> Diet;
-        protected string Name { get; set; }
+        protected int calories;
+        protected List<IDiet> diet;
+        protected string name;
+
+        public string Name 
+        { 
+            get => name;
+            set => name = value;
+        }
+        public List<IDiet> Diet 
+        {
+            get => diet;
+            set => diet = value;
+        }
+        public int Calories 
+        { 
+            get => calories;
+            set => calories = value;
+        }
 
         public string DietNames
         {
@@ -37,6 +53,8 @@ namespace animalSpace.Model.InteractablesAndItems
             Calories = calories;
         }
 
+        //public Food() { }
+
         public int GetId()
         {
             return Id;
@@ -49,7 +67,7 @@ namespace animalSpace.Model.InteractablesAndItems
         
         public void Interact(ICreature creature)
         {
-            creature.Eat(this);
+            //creature.Eat(this);
         }
 
         public string getDiet()

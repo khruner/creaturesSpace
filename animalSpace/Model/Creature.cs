@@ -1,30 +1,46 @@
 ﻿using animalSpace.Interfaces;
+using animalSpace.Static;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace animalSpace.Model
 {
-    internal class Creature : IKingdom//ICreature 
+    internal class Creature : IPositionable
     {
         Random rnd = new Random();
         protected static int counterID = 0;
         protected int ID;
         protected string CreatureName;
-        protected int MaxEnergy { get; set; }
-        protected int CurrentEnergy { get; set; }
-        protected int MaxHealth { get; set; }
-        protected int CurrentHealth { get; set; }
-        protected int AttackPoints { get; set; }
-        protected int DefPoints { get; set; }
-        protected int AttackRange { get; set; }
+        protected int MaxEnergy;
+        protected int CurrentEnergy;
+        protected int MaxHealth;
+        protected int CurrentHealth;
+        protected int AttackPoints; 
+        protected int DefPoints;
+        protected int AttackRange;
         protected IKingdom Kingdom;
         protected IDiet Diet;
-        protected List<IEnvironment> Environment;
-
+        protected List<IEnvironment> listEnvironments;
+        protected int energyCost;
         protected bool Alive = true;
+
+
+
+        public List<IEnvironment> ListEnvironments
+        {
+            get => listEnvironments;
+            set
+            {
+                if (value != null) 
+                    listEnvironments = value;
+                else 
+                    throw new InvalidOperationException("Debe seleccionar al menos un Habitat");
+            }
+        }
 
         public Creature(string creatureName, IDiet diet, IKingdom kingdom, List<IEnvironment> environment)
         {
@@ -40,7 +56,13 @@ namespace animalSpace.Model
             AttackRange = rnd.Next(0, 1);
             Kingdom = kingdom;
             Diet = diet;
-            Environment = environment;
+            ListEnvironments = environment;
+            energyCost = 25;
+        }
+
+        public List<IEnvironment> CompatibleEnvironments()
+        {
+            return ListEnvironments;
         }
 
         public string getCreatureName()
@@ -48,10 +70,6 @@ namespace animalSpace.Model
             return CreatureName;
         }
 
-        public List<IEnvironment> getCreatureEnvironment()
-        {
-            return Environment;
-        }
         public void MoveThrough(ITerrain terrain) 
         {
 
@@ -85,18 +103,44 @@ namespace animalSpace.Model
             return CurrentEnergy;
         }
 
-        /*public int Attack() 
+        public void Attack(Creature attackedCreature) 
         {
-
-        }*/
-        /*
-        public int BeingAttacked(int AtkPointsOfAttacker)
-        {
-           
+            if(IsEnergyToDoActionEnough(this.CurrentEnergy))
+            {
+                int interactionResult = receiveAttack(this);
+                if (interactionResult < 0)
+                {
+                    CurrentHealth -= interactionResult;
+                    MessageBox.Show($"Fuiste mas debil que la criatura atacada, perdiste {interactionResult} puntos de vida");
+                }
+                else
+                {
+                    attackedCreature.CurrentHealth -= interactionResult;
+                    MessageBox.Show($"Ataque exitoso, le quitaste {interactionResult}al rival");
+                }
+            }
         }
+
+        public int receiveAttack(Creature attackingCreature) 
+        {
+            int damage;
+            damage = (this.DefPoints + Dice.ThrowDice(6)) - (attackingCreature.AttackPoints + Dice.ThrowDice(6));
+            return damage;
+        }
+        
+        public bool IsEnergyToDoActionEnough(int energy) 
+        {
+            if (energy > energyCost) 
+            {
+                energy -= energyCost;
+                return true;
+            }
+            return false;
+        }
+        /*
         public void Interact(IInteractable interact)
         {
-
+            
         }
 
         public bool Die()

@@ -1,4 +1,5 @@
 ﻿using animalSpace.Interfaces;
+using animalSpace.Model.Environments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +57,7 @@ namespace animalSpace.Model.InteractablesAndItems
             Name = name;
         }
 
-        public Item() { }
+        //public Item() { }
 
         public IStrategyEffect Effect { get => effect; set => effect = value; }
 
@@ -73,7 +74,16 @@ namespace animalSpace.Model.InteractablesAndItems
         {
             return Name;
         }
+        public string getItemData()
+        {
+            return $"nombre: {name}, efectos: {listStrategies}";
+        }
 
+        public List<IEnvironment> CompatibleEnvironments()
+        {
+            List<IEnvironment> habitats = new List<IEnvironment>() { new Terrestrial(), new Aerial(), new Aquatic() };
+            return habitats;
+        }
 
     }
 }
