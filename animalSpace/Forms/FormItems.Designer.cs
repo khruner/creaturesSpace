@@ -37,6 +37,7 @@
             this.dgvItems = new System.Windows.Forms.DataGridView();
             this.item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Effects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,11 +114,22 @@
             this.Effects.HeaderText = "Effects";
             this.Effects.Name = "Effects";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(560, 226);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Volver atras";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FormItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(647, 261);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvItems);
             this.Controls.Add(this.lbEffects);
             this.Controls.Add(this.lbItem);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.DataGridView dgvItems;
         private System.Windows.Forms.DataGridViewTextBoxColumn item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Effects;
+        private System.Windows.Forms.Button btnBack;
     }
 }

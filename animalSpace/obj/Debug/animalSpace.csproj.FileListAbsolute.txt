@@ -12,3 +12,5 @@ E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.csproj.GenerateResource.c
 E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.csproj.CoreCompileInputs.cache
 E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.exe
 E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.pdb
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.FormMenu.resources
+E:\repos\animalSpace\animalSpace\obj\Debug\animalSpace.Forms.FormCreatureActions.resources

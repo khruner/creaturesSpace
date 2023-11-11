@@ -103,7 +103,7 @@ namespace animalSpace.Model
             get => attackPoints;
             set => attackPoints = value;
         }
-        public int DefensePoints 
+        public int DefPoints 
         {
             get => defPoints;
             set => defPoints = value;

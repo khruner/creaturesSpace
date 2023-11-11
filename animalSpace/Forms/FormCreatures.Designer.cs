@@ -38,10 +38,6 @@
             this.tbCreatureName = new System.Windows.Forms.TextBox();
             this.btnCreateCreature = new System.Windows.Forms.Button();
             this.dgvCreatures = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnDeleteCreature = new System.Windows.Forms.Button();
-            this.btnModify = new System.Windows.Forms.Button();
-            this.listBoxEnvironments = new System.Windows.Forms.ListBox();
             this.CreatureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kingdom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Environment = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +46,11 @@
             this.Defensa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Health = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentEnergy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDeleteCreature = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.listBoxEnvironments = new System.Windows.Forms.ListBox();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,41 +149,6 @@
             this.dgvCreatures.Size = new System.Drawing.Size(563, 150);
             this.dgvCreatures.TabIndex = 10;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(296, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Created creatures";
-            // 
-            // btnDeleteCreature
-            // 
-            this.btnDeleteCreature.Location = new System.Drawing.Point(716, 201);
-            this.btnDeleteCreature.Name = "btnDeleteCreature";
-            this.btnDeleteCreature.Size = new System.Drawing.Size(93, 23);
-            this.btnDeleteCreature.TabIndex = 12;
-            this.btnDeleteCreature.Text = "Delete creature";
-            this.btnDeleteCreature.UseVisualStyleBackColor = true;
-            // 
-            // btnModify
-            // 
-            this.btnModify.Location = new System.Drawing.Point(344, 201);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(93, 23);
-            this.btnModify.TabIndex = 13;
-            this.btnModify.Text = "Modify creature";
-            this.btnModify.UseVisualStyleBackColor = true;
-            // 
-            // listBoxEnvironments
-            // 
-            this.listBoxEnvironments.FormattingEnabled = true;
-            this.listBoxEnvironments.Location = new System.Drawing.Point(173, 103);
-            this.listBoxEnvironments.Name = "listBoxEnvironments";
-            this.listBoxEnvironments.Size = new System.Drawing.Size(120, 43);
-            this.listBoxEnvironments.TabIndex = 14;
-            // 
             // CreatureName
             // 
             this.CreatureName.Frozen = true;
@@ -236,11 +202,57 @@
             this.CurrentEnergy.Name = "CurrentEnergy";
             this.CurrentEnergy.Width = 50;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(296, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Created creatures";
+            // 
+            // btnDeleteCreature
+            // 
+            this.btnDeleteCreature.Location = new System.Drawing.Point(716, 201);
+            this.btnDeleteCreature.Name = "btnDeleteCreature";
+            this.btnDeleteCreature.Size = new System.Drawing.Size(93, 23);
+            this.btnDeleteCreature.TabIndex = 12;
+            this.btnDeleteCreature.Text = "Delete creature";
+            this.btnDeleteCreature.UseVisualStyleBackColor = true;
+            // 
+            // btnModify
+            // 
+            this.btnModify.Location = new System.Drawing.Point(344, 201);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(93, 23);
+            this.btnModify.TabIndex = 13;
+            this.btnModify.Text = "Modify creature";
+            this.btnModify.UseVisualStyleBackColor = true;
+            // 
+            // listBoxEnvironments
+            // 
+            this.listBoxEnvironments.FormattingEnabled = true;
+            this.listBoxEnvironments.Location = new System.Drawing.Point(173, 103);
+            this.listBoxEnvironments.Name = "listBoxEnvironments";
+            this.listBoxEnvironments.Size = new System.Drawing.Size(120, 43);
+            this.listBoxEnvironments.TabIndex = 14;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(784, 248);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 15;
+            this.btnBack.Text = "Volver Atras";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FormCreatures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 244);
+            this.ClientSize = new System.Drawing.Size(862, 283);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.listBoxEnvironments);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnDeleteCreature);
@@ -287,5 +299,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Defensa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Health;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentEnergy;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -97,7 +97,11 @@ namespace animalSpace.Forms
             }
         }
 
-        
-    
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FormMenu menu = new FormMenu();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

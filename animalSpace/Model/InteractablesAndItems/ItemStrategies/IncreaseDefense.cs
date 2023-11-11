@@ -17,7 +17,7 @@ namespace animalSpace.Model.InteractablesAndItems.ItemStrategies
         }
         public void AppliedEffect(Creature creature)
         {
-            creature.DefensePoints += Dice.ThrowDice(15);
+            creature.DefPoints += Dice.ThrowDice(15);
         }
     }
 }
