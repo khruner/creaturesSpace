@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ControllerActions.cs" />
     <Compile Include="Controllers\ControllerCreature.cs" />
     <Compile Include="Controllers\ControllerDiet.cs" />
     <Compile Include="Controllers\ControllerItem.cs" />
