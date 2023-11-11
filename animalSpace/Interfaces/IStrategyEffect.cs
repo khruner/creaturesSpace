@@ -1,4 +1,5 @@
-﻿using System;
+﻿using animalSpace.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace animalSpace.Interfaces
 {
     internal interface IStrategyEffect
     {
-        void AppliedEffect(ICreature creature);
+        void AppliedEffect(Creature creature);
     }
 }

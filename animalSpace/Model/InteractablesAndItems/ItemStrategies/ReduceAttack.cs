@@ -1,4 +1,5 @@
 ﻿using animalSpace.Interfaces;
+using animalSpace.Static;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,9 @@ namespace animalSpace.Model.InteractablesAndItems.ItemStrategies
         {
             return "Reduce Attack";
         }
-        public void AppliedEffect(ICreature creature)
+        public void AppliedEffect(Creature creature)
         {
-            
-
+            creature.AttackPoints -= Dice.ThrowDice(15);
         }
     }
 }

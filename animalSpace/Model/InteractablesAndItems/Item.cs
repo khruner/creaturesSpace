@@ -62,7 +62,7 @@ namespace animalSpace.Model.InteractablesAndItems
         public IStrategyEffect Effect { get => effect; set => effect = value; }
 
 
-        public void Interact(ICreature creature)
+        public void Interact(Creature creature)
         {
             foreach( var effect in listStrategies)
             {
@@ -76,7 +76,7 @@ namespace animalSpace.Model.InteractablesAndItems
 
             foreach (var effect in listStrategies)
             {
-                effects += effect.ToString() + " ";
+                effects += effect.ToString() + " and ";
             }
             return effects;
         }

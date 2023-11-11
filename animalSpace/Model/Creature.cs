@@ -3,6 +3,7 @@ using animalSpace.Static;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,21 +15,128 @@ namespace animalSpace.Model
         Random rnd = new Random();
         protected static int counterID = 0;
         protected int ID;
-        protected string CreatureName;
-        protected int MaxEnergy;
-        protected int CurrentEnergy;
-        protected int MaxHealth;
-        protected int CurrentHealth;
-        protected int AttackPoints; 
-        protected int DefPoints;
-        protected int AttackRange;
-        protected IKingdom Kingdom;
-        protected IDiet Diet;
+        protected string creatureName;
+        protected int maxEnergy;
+        protected int currentEnergy;
+        protected int maxHealth;
+        protected int currentHealth;
+        protected int attackPoints; 
+        protected int defPoints;
+        protected int attackRange;
+        protected IKingdom kingdom;
+        protected IDiet diet;
         protected List<IEnvironment> listEnvironments;
         protected int energyCost;
-        protected bool Alive = true;
+        protected bool alive = true;
 
+        public IKingdom Kingdom
+        {
+            get => kingdom;
+            set
+            {
+                if (value != null) kingdom = value;
+                else throw new InvalidOperationException("Debe seleccionar un Reino");
+            }
+        }
 
+        public string CreatureName
+        {
+            get => creatureName;
+            set
+            {
+                if (value != null) creatureName = value;
+                else throw new InvalidOperationException("Debe especificar un Nombre");
+            }
+        }
+        public IDiet Diet
+        {
+            get => diet;
+            set
+            {
+                if (value != null) diet = value;
+                else throw new InvalidOperationException("Debe especificar una Dieta");
+            }
+        }
+
+        public int MaxEnergy
+        {
+            get => maxEnergy;
+            set
+            {
+                if (value > 0) maxEnergy = value;
+                else throw new InvalidOperationException("La energía máxima debe ser mayor a 0");
+            }
+        }
+        public int MaxHealth
+        {
+            get => maxHealth;
+            set
+            {
+                if (value > 0) maxHealth = value;
+                else throw new InvalidOperationException("La vida máxima debe ser mayor a 0");
+            }
+        }
+        public int CurrentHealth
+        {
+            get => currentHealth;
+            set
+            {
+                if (value <= 0)
+                {
+                    currentHealth = 0;
+                    Alive = true;
+                    throw new Exception("Está muerto");
+                }
+                else if (value > MaxHealth)
+                {
+                    currentHealth = MaxHealth;
+                }
+                else
+                {
+                    currentHealth = value;
+                }
+            }
+        }
+
+        public int AttackPoints 
+        {
+            get => attackPoints;
+            set => attackPoints = value;
+        }
+        public int DefensePoints 
+        {
+            get => defPoints;
+            set => defPoints = value;
+        }
+        public int AttackRange 
+        { 
+            get => attackRange;
+            set => attackRange = value;
+        }
+        public int CurrentEnergy
+        {
+            get => currentEnergy;
+            set
+            {
+                if (value < 0)
+                {
+                    currentEnergy = 0;
+                }
+                else if (value > MaxEnergy)
+                {
+                    currentEnergy = MaxEnergy;
+                }
+                else
+                {
+                    currentEnergy = value;
+                }
+            }
+        }
+        public bool Alive 
+        {
+            get => alive;
+            set => alive = value;
+        }
 
         public List<IEnvironment> ListEnvironments
         {

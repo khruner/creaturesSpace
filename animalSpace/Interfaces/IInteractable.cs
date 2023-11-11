@@ -9,6 +9,6 @@ namespace animalSpace.Interfaces
 {
     internal interface IInteractable
     {
-        void Interact(ICreature creature);
+        void Interact(Creature creature);
     }
 }

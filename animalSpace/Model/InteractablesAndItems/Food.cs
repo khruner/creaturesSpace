@@ -65,9 +65,9 @@ namespace animalSpace.Model.InteractablesAndItems
             return Calories;
         }
         
-        public void Interact(ICreature creature)
+        public void Interact(Creature creature)
         {
-            //creature.Eat(this);
+            creature.Eat(this);
         }
 
         public string getDiet()
