@@ -77,7 +77,6 @@ namespace animalSpace.Forms
             }
             return itemsInListbox;
         }
-
         public void loadDgvCreatures()
         {
             List<Creature> listCreatures = ctrCreature.getCreatures();
@@ -85,12 +84,20 @@ namespace animalSpace.Forms
             foreach (var creature in listCreatures)
             {
                 DataGridViewRow row = new DataGridViewRow();
-                row.CreateCells(dgvCreatures, creature.getCreatureName(), creature.getCreatureKingdom(), creature.CompatibleEnvironments(), creature.getCreatureDiet());
+                row.CreateCells(dgvCreatures,
+                    creature.getCreatureName(),
+                    creature.getCreatureKingdom(),
+                    creature.getEnvironmentsString(),
+                    creature.getCreatureDiet(),
+                    creature.getAtkPoints(),
+                    creature.getDefPoints(),
+                    creature.getCurrentHealth(),
+                    creature.getCurrentEnergy());
                 dgvCreatures.Rows.Add(row);
             }
         }
 
-
+        
     
     }
 }

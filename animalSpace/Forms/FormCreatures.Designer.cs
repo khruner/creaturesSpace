@@ -38,14 +38,18 @@
             this.tbCreatureName = new System.Windows.Forms.TextBox();
             this.btnCreateCreature = new System.Windows.Forms.Button();
             this.dgvCreatures = new System.Windows.Forms.DataGridView();
-            this.CreatureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kingdom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Environment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDeleteCreature = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.listBoxEnvironments = new System.Windows.Forms.ListBox();
+            this.CreatureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kingdom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Environment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Attack = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Defensa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Health = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentEnergy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,40 +138,20 @@
             this.CreatureName,
             this.Kingdom,
             this.Environment,
-            this.Diet});
-            this.dgvCreatures.Location = new System.Drawing.Point(346, 43);
+            this.Diet,
+            this.Attack,
+            this.Defensa,
+            this.Health,
+            this.CurrentEnergy});
+            this.dgvCreatures.Location = new System.Drawing.Point(299, 40);
             this.dgvCreatures.Name = "dgvCreatures";
-            this.dgvCreatures.Size = new System.Drawing.Size(443, 150);
+            this.dgvCreatures.Size = new System.Drawing.Size(563, 150);
             this.dgvCreatures.TabIndex = 10;
-            // 
-            // CreatureName
-            // 
-            this.CreatureName.Frozen = true;
-            this.CreatureName.HeaderText = "Name";
-            this.CreatureName.Name = "CreatureName";
-            // 
-            // Kingdom
-            // 
-            this.Kingdom.Frozen = true;
-            this.Kingdom.HeaderText = "Kingdom";
-            this.Kingdom.Name = "Kingdom";
-            // 
-            // Environment
-            // 
-            this.Environment.Frozen = true;
-            this.Environment.HeaderText = "Environment";
-            this.Environment.Name = "Environment";
-            // 
-            // Diet
-            // 
-            this.Diet.Frozen = true;
-            this.Diet.HeaderText = "Diet";
-            this.Diet.Name = "Diet";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(346, 13);
+            this.label4.Location = new System.Drawing.Point(296, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 11;
@@ -175,7 +159,7 @@
             // 
             // btnDeleteCreature
             // 
-            this.btnDeleteCreature.Location = new System.Drawing.Point(815, 169);
+            this.btnDeleteCreature.Location = new System.Drawing.Point(716, 201);
             this.btnDeleteCreature.Name = "btnDeleteCreature";
             this.btnDeleteCreature.Size = new System.Drawing.Size(93, 23);
             this.btnDeleteCreature.TabIndex = 12;
@@ -184,7 +168,7 @@
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(815, 46);
+            this.btnModify.Location = new System.Drawing.Point(344, 201);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(93, 23);
             this.btnModify.TabIndex = 13;
@@ -199,11 +183,64 @@
             this.listBoxEnvironments.Size = new System.Drawing.Size(120, 43);
             this.listBoxEnvironments.TabIndex = 14;
             // 
+            // CreatureName
+            // 
+            this.CreatureName.Frozen = true;
+            this.CreatureName.HeaderText = "Name";
+            this.CreatureName.Name = "CreatureName";
+            this.CreatureName.Width = 80;
+            // 
+            // Kingdom
+            // 
+            this.Kingdom.Frozen = true;
+            this.Kingdom.HeaderText = "Kingdom";
+            this.Kingdom.Name = "Kingdom";
+            this.Kingdom.Width = 80;
+            // 
+            // Environment
+            // 
+            this.Environment.Frozen = true;
+            this.Environment.HeaderText = "Environment";
+            this.Environment.Name = "Environment";
+            this.Environment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Environment.Width = 80;
+            // 
+            // Diet
+            // 
+            this.Diet.Frozen = true;
+            this.Diet.HeaderText = "Diet";
+            this.Diet.Name = "Diet";
+            this.Diet.Width = 80;
+            // 
+            // Attack
+            // 
+            this.Attack.HeaderText = "Attack";
+            this.Attack.Name = "Attack";
+            this.Attack.Width = 50;
+            // 
+            // Defensa
+            // 
+            this.Defensa.HeaderText = "Defense";
+            this.Defensa.Name = "Defensa";
+            this.Defensa.Width = 50;
+            // 
+            // Health
+            // 
+            this.Health.HeaderText = "Health";
+            this.Health.Name = "Health";
+            this.Health.Width = 50;
+            // 
+            // CurrentEnergy
+            // 
+            this.CurrentEnergy.HeaderText = "Energy";
+            this.CurrentEnergy.Name = "CurrentEnergy";
+            this.CurrentEnergy.Width = 50;
+            // 
             // FormCreatures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 244);
+            this.ClientSize = new System.Drawing.Size(871, 244);
             this.Controls.Add(this.listBoxEnvironments);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnDeleteCreature);
@@ -241,10 +278,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDeleteCreature;
         private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.ListBox listBoxEnvironments;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatureName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kingdom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Environment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
-        private System.Windows.Forms.ListBox listBoxEnvironments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Attack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Defensa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Health;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentEnergy;
     }
 }

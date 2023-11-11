@@ -42,7 +42,7 @@ namespace animalSpace.Model.InteractablesAndItems
             }
         }
 
-        public Item(List<IStrategyEffect> listStrategies, string name)
+        public Item(string name, List<IStrategyEffect> listStrategies)
         {
             counterID++;
             ID = counterID;
@@ -70,6 +70,16 @@ namespace animalSpace.Model.InteractablesAndItems
             }
         }
 
+        public string getEffectsString()
+        {
+            string effects = "";
+
+            foreach (var effect in listStrategies)
+            {
+                effects += effect.ToString() + " ";
+            }
+            return effects;
+        }
         public override string ToString()
         {
             return Name;

@@ -59,10 +59,44 @@ namespace animalSpace.Model
             ListEnvironments = environment;
             energyCost = 25;
         }
-
+        public int getAtkPoints() 
+        {
+            return AttackPoints;
+        }
+        public int getCurrentHealth()
+        {
+            return CurrentHealth;
+        }
+        public int getDefPoints()
+        {
+            return DefPoints;
+        }
+        public int getCurrentEnergy()
+        {
+            return CurrentEnergy;
+        }
         public List<IEnvironment> CompatibleEnvironments()
         {
             return ListEnvironments;
+        }
+        public List<string> getEnvironments() 
+        {
+            List<string> environmentsList = new List<string>();
+            foreach (var environment in listEnvironments)
+            {
+                environmentsList.Add(environment.ToString());
+            }
+            return environmentsList;
+        }
+        public string getEnvironmentsString()
+        {
+            string env = "";
+           
+            foreach (var environment in listEnvironments)
+            {
+                env +=environment.ToString()+" ";
+            }
+            return env;
         }
 
         public string getCreatureName()

@@ -9,6 +9,10 @@ namespace animalSpace.Model.InteractablesAndItems.ItemStrategies
 {
     internal class ReduceDefense : IStrategyEffect
     {
+        public override string ToString()
+        {
+            return "Reduce Defense";
+        }
         public void AppliedEffect(ICreature creature)
         {
             
