@@ -10,13 +10,10 @@ namespace animalSpace.Model.Diets
 {
     internal class CarnivorousDiet: IDiet
     {
-        public bool CanEat(Food food) 
+        
+        public bool CanEat(IInteractable food) 
         {
-            if (food.DietNames == ToString())
-            {
-                return true;
-            }
-            else return false;
+            return food is Creature;
         }
 
         public override string ToString()

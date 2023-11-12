@@ -30,20 +30,39 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnUseItem = new System.Windows.Forms.Button();
-            this.cbCreatures1 = new System.Windows.Forms.ComboBox();
-            this.cbCreatures2 = new System.Windows.Forms.ComboBox();
-            this.cbItems = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbAction = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCreaturesAffected = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lbAffectedObject = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.cbItems = new System.Windows.Forms.ComboBox();
+            this.dgvCreatures1 = new System.Windows.Forms.DataGridView();
+            this.dgvCreatures2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kingdom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Environment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Attack = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Defensa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Health = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CurrentEnergy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCreaturesAffected)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(257, 110);
+            this.button1.Location = new System.Drawing.Point(383, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 23);
             this.button1.TabIndex = 0;
@@ -52,41 +71,17 @@
             // 
             // btnUseItem
             // 
-            this.btnUseItem.Location = new System.Drawing.Point(265, 161);
+            this.btnUseItem.Location = new System.Drawing.Point(391, 149);
             this.btnUseItem.Name = "btnUseItem";
             this.btnUseItem.Size = new System.Drawing.Size(75, 23);
             this.btnUseItem.TabIndex = 1;
             this.btnUseItem.Text = "Use item";
             this.btnUseItem.UseVisualStyleBackColor = true;
             // 
-            // cbCreatures1
-            // 
-            this.cbCreatures1.FormattingEnabled = true;
-            this.cbCreatures1.Location = new System.Drawing.Point(97, 58);
-            this.cbCreatures1.Name = "cbCreatures1";
-            this.cbCreatures1.Size = new System.Drawing.Size(121, 21);
-            this.cbCreatures1.TabIndex = 2;
-            // 
-            // cbCreatures2
-            // 
-            this.cbCreatures2.FormattingEnabled = true;
-            this.cbCreatures2.Location = new System.Drawing.Point(373, 58);
-            this.cbCreatures2.Name = "cbCreatures2";
-            this.cbCreatures2.Size = new System.Drawing.Size(121, 21);
-            this.cbCreatures2.TabIndex = 3;
-            // 
-            // cbItems
-            // 
-            this.cbItems.FormattingEnabled = true;
-            this.cbItems.Location = new System.Drawing.Point(240, 204);
-            this.cbItems.Name = "cbItems";
-            this.cbItems.Size = new System.Drawing.Size(121, 21);
-            this.cbItems.TabIndex = 4;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(254, 34);
+            this.label1.Location = new System.Drawing.Point(390, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 5;
@@ -95,28 +90,28 @@
             // lbAction
             // 
             this.lbAction.AutoSize = true;
-            this.lbAction.Location = new System.Drawing.Point(262, 61);
+            this.lbAction.Location = new System.Drawing.Point(407, 48);
             this.lbAction.Name = "lbAction";
             this.lbAction.Size = new System.Drawing.Size(59, 13);
             this.lbAction.TabIndex = 6;
             this.lbAction.Text = "--ACCION--";
             // 
-            // dataGridView1
+            // dgvCreaturesAffected
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 275);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(575, 150);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvCreaturesAffected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCreaturesAffected.Location = new System.Drawing.Point(31, 275);
+            this.dgvCreaturesAffected.Name = "dgvCreaturesAffected";
+            this.dgvCreaturesAffected.Size = new System.Drawing.Size(809, 150);
+            this.dgvCreaturesAffected.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(38, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Objecto afectado";
+            this.label2.Text = "Objeto afectado";
             // 
             // lbAffectedObject
             // 
@@ -127,24 +122,179 @@
             this.lbAffectedObject.TabIndex = 9;
             this.lbAffectedObject.Text = "--OBJECT--";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(765, 442);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Volver atras";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // cbItems
+            // 
+            this.cbItems.FormattingEnabled = true;
+            this.cbItems.Location = new System.Drawing.Point(366, 192);
+            this.cbItems.Name = "cbItems";
+            this.cbItems.Size = new System.Drawing.Size(121, 21);
+            this.cbItems.TabIndex = 4;
+            // 
+            // dgvCreatures1
+            // 
+            this.dgvCreatures1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCreatures1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CreatureName,
+            this.Kingdom,
+            this.Environment,
+            this.Diet,
+            this.Attack,
+            this.Defensa,
+            this.Health,
+            this.CurrentEnergy});
+            this.dgvCreatures1.Location = new System.Drawing.Point(12, 22);
+            this.dgvCreatures1.Name = "dgvCreatures1";
+            this.dgvCreatures1.Size = new System.Drawing.Size(365, 150);
+            this.dgvCreatures1.TabIndex = 13;
+            // 
+            // dgvCreatures2
+            // 
+            this.dgvCreatures2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCreatures2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dgvCreatures2.Location = new System.Drawing.Point(484, 22);
+            this.dgvCreatures2.Name = "dgvCreatures2";
+            this.dgvCreatures2.Size = new System.Drawing.Size(443, 150);
+            this.dgvCreatures2.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Kingdom";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Environment";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Diet";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Attack";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Defense";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Health";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Energy";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 50;
+            // 
+            // CreatureName
+            // 
+            this.CreatureName.Frozen = true;
+            this.CreatureName.HeaderText = "Name";
+            this.CreatureName.Name = "CreatureName";
+            this.CreatureName.Width = 80;
+            // 
+            // Kingdom
+            // 
+            this.Kingdom.HeaderText = "Kingdom";
+            this.Kingdom.Name = "Kingdom";
+            this.Kingdom.Width = 80;
+            // 
+            // Environment
+            // 
+            this.Environment.HeaderText = "Environment";
+            this.Environment.Name = "Environment";
+            this.Environment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Environment.Width = 80;
+            // 
+            // Diet
+            // 
+            this.Diet.HeaderText = "Diet";
+            this.Diet.Name = "Diet";
+            this.Diet.Width = 80;
+            // 
+            // Attack
+            // 
+            this.Attack.HeaderText = "Attack";
+            this.Attack.Name = "Attack";
+            this.Attack.Width = 50;
+            // 
+            // Defensa
+            // 
+            this.Defensa.HeaderText = "Defense";
+            this.Defensa.Name = "Defensa";
+            this.Defensa.Width = 50;
+            // 
+            // Health
+            // 
+            this.Health.HeaderText = "Health";
+            this.Health.Name = "Health";
+            this.Health.Width = 50;
+            // 
+            // CurrentEnergy
+            // 
+            this.CurrentEnergy.HeaderText = "Energy";
+            this.CurrentEnergy.Name = "CurrentEnergy";
+            this.CurrentEnergy.Width = 50;
+            // 
             // FormCreatureActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 437);
+            this.ClientSize = new System.Drawing.Size(1007, 477);
+            this.Controls.Add(this.dgvCreatures2);
+            this.Controls.Add(this.dgvCreatures1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbAffectedObject);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCreaturesAffected);
             this.Controls.Add(this.lbAction);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbItems);
-            this.Controls.Add(this.cbCreatures2);
-            this.Controls.Add(this.cbCreatures1);
             this.Controls.Add(this.btnUseItem);
             this.Controls.Add(this.button1);
             this.Name = "FormCreatureActions";
             this.Text = "FormCreatureActions";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCreaturesAffected)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCreatures2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,13 +304,30 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnUseItem;
-        private System.Windows.Forms.ComboBox cbCreatures1;
-        private System.Windows.Forms.ComboBox cbCreatures2;
-        private System.Windows.Forms.ComboBox cbItems;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbAction;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCreaturesAffected;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbAffectedObject;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox cbItems;
+        private System.Windows.Forms.DataGridView dgvCreatures1;
+        private System.Windows.Forms.DataGridView dgvCreatures2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreatureName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kingdom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Environment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Attack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Defensa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Health;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CurrentEnergy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

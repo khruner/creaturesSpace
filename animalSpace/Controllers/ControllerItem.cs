@@ -32,17 +32,18 @@ namespace animalSpace.Controllers
         {
             listItems.Add(new Item(Name, Effect));
         }
-        private List<Item> generatePredefinedItems()
+        public List<Item> generatePredefinedItems()
         {
             List<IStrategyEffect> AtkPlusDefRed = new List<IStrategyEffect>() { new IncreaseAttack(), new ReduceDefense() };
             List<IStrategyEffect> DefPlusAtkRed = new List<IStrategyEffect>() { new IncreaseDefense(), new ReduceAttack() };
-            List<Item> creaturesList = new List<Item>
+            List<Item> itemsList = new List<Item>
             {
                 new Item(new IncreaseAttack(), "Pocion de ataque"),
                 new Item("Suba de Ataque, pero resta de defensa", AtkPlusDefRed),
                 new Item("Suba de Defensa, pero resta de Ataque", DefPlusAtkRed)
             };
-            return creaturesList;
+            listItems.AddRange(itemsList);
+            return listItems;
         }
         public List<Item> getItems()
         {

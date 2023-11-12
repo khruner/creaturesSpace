@@ -1,4 +1,5 @@
 ﻿using animalSpace.Interfaces;
+using animalSpace.Model.InteractablesAndItems;
 using animalSpace.Static;
 using System;
 using System.Collections.Generic;
@@ -227,13 +228,23 @@ namespace animalSpace.Model
             return Diet;
         }
 
-        public int Eat(IFood food) 
+        public void Eat(IInteractable food) 
         {
-            if (food.ToString() == Diet.ToString())
+            
+            if (Diet.CanEat(food))
             {
-                return food.getCalories();
+                food.Interact(this);
             }
-            return 0;
+            else
+            {
+                MessageBox.Show("Qué estas tratando de comer, zoquete");
+            }
+
+        }
+
+        public void AddEnergy(int energy)
+        {
+            currentEnergy += energy;
         }
 
         public int Rest() 

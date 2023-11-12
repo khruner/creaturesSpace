@@ -17,7 +17,7 @@ namespace animalSpace
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormItems());
+            Application.Run(new FormMenu());
         }
     }
 }

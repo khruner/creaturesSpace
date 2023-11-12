@@ -101,7 +101,7 @@ namespace animalSpace.Forms
         {
             FormMenu menu = new FormMenu();
             menu.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

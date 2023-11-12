@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace animalSpace.Model.InteractablesAndItems
 {
-    internal class Food : IInteractable, IFood
+    internal class Food : IInteractable
     {
         protected static int id_counter = 0;
         protected int Id;
@@ -67,7 +67,7 @@ namespace animalSpace.Model.InteractablesAndItems
         
         public void Interact(Creature creature)
         {
-            creature.Eat(this);
+            creature.AddEnergy(Calories);
         }
 
         public string getDiet()

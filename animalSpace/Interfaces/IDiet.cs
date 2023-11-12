@@ -10,6 +10,6 @@ namespace animalSpace.Interfaces
 {
     internal interface IDiet
     {
-        bool CanEat(Food food);
+        bool CanEat(IInteractable food);
     }
 }
