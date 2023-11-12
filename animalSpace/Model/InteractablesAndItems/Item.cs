@@ -80,6 +80,11 @@ namespace animalSpace.Model.InteractablesAndItems
             }
             return effects;
         }
+
+        public int getItemId()
+        {
+            return ID;
+        }
         public override string ToString()
         {
             return Name;

@@ -213,6 +213,11 @@ namespace animalSpace.Model
             return CreatureName;
         }
 
+        public int getCreatureId()
+        {
+            return ID;
+        }
+
         public void MoveThrough(ITerrain terrain) 
         {
 
@@ -269,7 +274,7 @@ namespace animalSpace.Model
                 else
                 {
                     attackedCreature.CurrentHealth -= interactionResult;
-                    MessageBox.Show($"Ataque exitoso, le quitaste {interactionResult}al rival");
+                    MessageBox.Show($"Ataque exitoso, le quitaste {interactionResult} de vida al rival");
                 }
             }
         }

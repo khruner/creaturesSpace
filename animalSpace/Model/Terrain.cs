@@ -14,19 +14,23 @@ namespace animalSpace.Model
         protected static int counterID = 0;
         protected int ID;
         protected ITerrain terrainType;
-        protected List<Terrain> borderingTerrain = new List<Terrain>();
+        /*protected List<Terrain> borderingTerrain = new List<Terrain>();
         protected List<IPositionable> positionables;//items dentro del terreno
         protected List<Item> items = new List<Item>();
         protected List<Food> foods = new List<Food>();
-        protected List<Creature> creatures = new List<Creature>();
-        
+        protected List<Creature> creatures = new List<Creature>();*/
+        public List<IInteractable> interactables;
 
-        public Terrain(ITerrain TerrainType)
+        public ITerrain TerrainType { get => terrainType; set => terrainType = value; }
+        public List<IInteractable> Interactables { get => interactables; set => interactables = value; }
+
+        public Terrain(ITerrain terrainType, List<IInteractable> interactables)
         {
             ID = counterID;
             counterID++;
             TerrainType = terrainType;
-            positionables = new List<IPositionable>();
+            Interactables = interactables;
+
         }
         public override string ToString()
         {

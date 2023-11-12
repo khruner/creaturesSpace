@@ -58,7 +58,8 @@ namespace animalSpace.Controllers
                 new Creature("Cienpiés", new OmnivorousDiet(), new AnimalKingdom(), environments),
                 new Creature("Mantis", new HerviborousDiet(), new AnimalKingdom(), environments),
             };
-            return creaturesList;
+            listCreatures.AddRange(creaturesList);
+            return listCreatures;
         }
         public List<Creature> getCreatures()
         {
@@ -83,5 +84,11 @@ namespace animalSpace.Controllers
         {
             item.Interact(creature);
         }
+
+        public Creature getCreatureById(int id)
+        {
+            return listCreatures.FirstOrDefault(creature => creature.getCreatureId() == id);
+        }
+    
     }
 }

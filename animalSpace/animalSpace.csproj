@@ -51,6 +51,7 @@
     <Compile Include="Controllers\ControllerDiet.cs" />
     <Compile Include="Controllers\ControllerItem.cs" />
     <Compile Include="Controllers\ControllerKingdom.cs" />
+    <Compile Include="Controllers\ControllerTerrain.cs" />
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,7 @@
     <Compile Include="Model\Kingdoms\MachineKingdom.cs" />
     <Compile Include="Model\Kingdoms\MytholigicKingdom.cs" />
     <Compile Include="Model\Game\Player.cs" />
+    <Compile Include="Model\Map.cs" />
     <Compile Include="Model\Terrain.cs" />
     <Compile Include="Model\Terrains\Air.cs" />
     <Compile Include="Model\Terrains\Earth.cs" />

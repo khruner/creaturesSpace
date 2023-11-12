@@ -49,5 +49,10 @@ namespace animalSpace.Controllers
         {
             return listItems;
         }
+
+        public IInteractable getItemById(int id)
+        {
+            return listItems.FirstOrDefault(item => item.getItemId() == id);
+        }
     }
 }
